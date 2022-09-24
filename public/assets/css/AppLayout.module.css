@@ -1,0 +1,9 @@
+.me {
+  background-size: cover;
+  width: 152px;
+  background-position: center -8px;
+  height: 152px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  align-self: center;
+}

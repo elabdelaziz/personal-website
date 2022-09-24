@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+} */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  height: 100%;
+  background-color: #eee;
+  background-image: url('/assets/img/mountains.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: fit-content(50%) auto;
+  grid-template-areas:
+    'side side side side side side side side side side'
+    'cont cont cont cont cont cont cont cont cont cont';
+}
+
+nav {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .page {
+    height: 100vh;
+  }
+  nav {
+    display: none;
+  }
+  aside {
+    display: block;
+  }
+  .page {
+    grid-template-areas:
+      'side side side cont cont cont cont cont cont cont'
+      'side side side cont cont cont cont cont cont cont';
+    grid-template-rows: auto;
+  }
+}
+h2 {
+  grid-area: logo;
+  /* background-color: red; */
+  color: white;
+}
+nav {
+  grid-area: nav;
+  /* background-color: blue; */
+  color: white;
+}
+section {
+  grid-area: cont;
+  /* background-color: yellow; */
+  color: white;
+}
+aside {
+  grid-area: side;
+  background-color: rgba(145, 13, 13, 0.8);
+  color: white;
+}
